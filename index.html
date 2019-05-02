@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js_oop</title>
+    <link rel='stylesheet' href="./style.css">
+</head>
+<body>
+<main>
+    <h1>Employees</h1>
+    <h3>Add employee</h3>
+    <form onsubmit="createEmployee(name.value, salary_rate.value); return false;">
+        <p id="error"></p>
+        <p><label>Employee name:</label>
+            <input type="text" id="name_input" name="name" maxlength="100" placeholder="Enter employee name" required></p>
+        <p><label>Salary rate:</label>
+            <input type="number" min="1" max="10000" name="salary_rate" placeholder="Enter salary rate" required></p>
+        <div id="salary_period">
+            <p>Salary per:</p>
+            <label><input type="radio" class="salary_period" name="salary_period" value="per_month" checked>month</label>
+            <label><input type="radio" class="salary_period" name="salary_period" value="per_hour">hour</label>
+        </div>
+        <p><button class="button">Add employee</button></p>
+    </form>
+    <h3>Employees list</h3>
+    <div>
+        <button id="all" class="show_filter active">Show all</button>
+        <button id="first_5" class="show_filter">Show first 5</button>
+        <button id="last_3" class="show_filter">Show last 3</button>
+        <table>
+            <tr class="header">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary per month</th>
+            </tr>
+        </table>
+    </div>
+</main>
+<script src="action.js"></script>
+</body>
+</html>
